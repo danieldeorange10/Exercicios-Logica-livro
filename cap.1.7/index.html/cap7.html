@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Jantar</title>
+  <script>
+    function calcularTotal() {
+      var valorJantar = parseFloat(document.getElementById("valorJantar").value);
+      var temEntrada = document.getElementById("temEntrada").checked;
+
+      var taxaGarcom = valorJantar * 0.1;
+      var valorEntrada = temEntrada ? 12 : 0;
+      var valorTotal = valorJantar + taxaGarcom + valorEntrada;
+
+      document.getElementById("taxaGarcom").innerHTML = "Taxa do garçom: R$ " + taxaGarcom.toFixed(2);
+      document.getElementById("valorEntrada").innerHTML = "Valor da entrada: R$ " + valorEntrada.toFixed(2);
+      document.getElementById("valorTotal").innerHTML = "Valor total do jantar: R$ " + valorTotal.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h1>Calculadora de Jantar</h1>
+
+  <label for="valorJantar">Valor do Jantar:</label>
+  <input type="number" id="valorJantar" step="0.01"><br><br>
+
+  <label for="temEntrada">Restaurante possui entrada?</label>
+  <input type="checkbox" id="temEntrada"><br><br>
+
+  <button onclick="calcularTotal()">Calcular</button><br><br>
+
+  <div id="resultado">
+    <p id="taxaGarcom"></p>
+    <p id="valorEntrada"></p>
+    <p id="valorTotal"></p>
+  </div>
+</body>
+</html>

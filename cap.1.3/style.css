@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif ;
+    background-color: #14e363;
+ 
+ }
+ 
+ h1 {
+     text-align: center;
+     margin-top: 50px;
+ }
+ 
+ div {
+     display: flex;
+     justify-content: center;
+     margin-top: 50px;
+ 
+ }
+ 
+ #resultado-lancamento {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-top: 20px;
+ 
+ }
+ 
+ #resultado-lancamento p {
+     font-size: 28px;
+     font-weight: bold;
+ }

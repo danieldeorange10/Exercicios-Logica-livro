@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #resultado {
+      color: rgb(68, 213, 20);
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Calculadora de Dobro</h2>
+  <label for="numero">Digite um número:</label>
+  <input type="number" id="numero">
+  <button onclick="calcularDobro()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+    function calcularDobro() {
+      // Passo 1: Entrada de dados
+      var inputNumero = document.getElementById("numero");
+      var numero = parseFloat(inputNumero.value);
+
+      // Passo 2: Processamento
+      var soma = numero + 2;
+
+      // Passo 3: Saída
+      var resultado = document.getElementById("resultado");
+      resultado.textContent = "A soma dos números é: " + soma;
+    }
+  </script>
+</body>
+</html>

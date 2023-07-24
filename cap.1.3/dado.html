@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <title>Apostila JavaScript Progressivo</title>
+ </head>
+ <body>
+ <button onclick="jogar()">Lançar Dados</button><br />
+ Sorteado: <div id="resp"></div>
+
+ <script type="text/javascript">
+  function jogar()
+  {
+    var resp = document.getElementById('resp');
+    resp.innerHTML = Math.floor( 1 + 6*Math.random() );
+  }
+ </script>
+ </body>
+</html>
